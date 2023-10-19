@@ -1,0 +1,32 @@
+<p>book-get works!</p>
+<div class="product-grid">
+    <div class="product-card" *ngFor="let book of books">
+      <h3>{{book.name}}</h3>
+      <p>Price: {{book.price}}</p>
+      <p>Quantity: {{book.quantity}}</p>
+      <a [routerLink]="['/book/edit', book._id]" class="btn btn-primary">Edit</a>
+            <a (click) = "deleteBook(book._id)"  class="btn btn-danger">Delete</a>
+    </div>
+  </div>
+
+<!-- <table class="table table-hover">
+    <thead>
+    <tr>
+        <td>Book Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td colspan="2">Actions</td>
+    </tr>
+    </thead>
+  
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td>{{ book.name }}</td>
+            <td>{{ book.price }}</td>
+            <td>{{ book.quantity }}</td>
+            <td><a [routerLink]="['/book/edit', book._id]" class="btn btn-primary">Edit</a></td>
+            <td><a (click) = "deleteBook(book._id)"  class="btn btn-danger">Delete</a></td>
+        </tr>
+    </tbody>
+  </table>
+   -->

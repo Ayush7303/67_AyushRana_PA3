@@ -1,0 +1,13 @@
+<p>c5 works!</p>
+
+<h2>User's Personal Details Form</h2>
+<form (ngSubmit)="onSubmit()">
+    Name:<input type="text" name="name" [(ngModel)]="name">
+    Email:<input type="text" name="email" [(ngModel)]="email">
+    <button type="submit">Submit</button>
+</form>
+
+<div *ngIf="isSubmitted">
+    <p>Name: {{ name }}</p>
+  <p>Email: {{ email }}</p>
+</div>

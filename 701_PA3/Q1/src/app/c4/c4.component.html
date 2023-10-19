@@ -1,0 +1,28 @@
+<p>c4 works!</p>
+<div>
+    <h2>Select: Textbox or Textarea</h2>
+  
+    <select [(ngModel)]="selectedOption">
+      <option value="textbox">Textbox</option>
+      <option value="textarea">Textarea</option>
+    </select>
+  
+    <div *ngIf="selectedOption === 'textbox'">
+      <input type="text" [(ngModel)]="textValue" placeholder="Enter text">
+    </div>
+  
+    <div *ngIf="selectedOption === 'textarea'">
+      <textarea [(ngModel)]="textareaValue" placeholder="Enter text"></textarea>
+    </div>
+  
+    <div>
+      <h3>Data:</h3>
+      <div *ngIf="selectedOption === 'textbox'">
+        <p>Text entered in Textbox: {{ textValue | uppercase }}</p>
+      </div>
+      <div *ngIf="selectedOption === 'textarea'">
+        <p>Text entered in Textarea: {{ textareaValue | uppercase }}</p>
+      </div>
+    </div>
+  </div>
+  
